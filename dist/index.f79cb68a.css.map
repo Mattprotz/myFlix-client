@@ -1,0 +1,1 @@
+{"mappings":"AAEA","sources":["Desktop/Bootcamp/myFlix-client/index.scss"],"sourcesContent":["$color: steelblue;\n\n.my-flix{\n    color: $color;\n}"],"names":[],"version":3,"file":"index.f79cb68a.css.map","sourceRoot":"/__parcel_source_root/"}
