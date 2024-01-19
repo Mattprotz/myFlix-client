@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"fgjiy":[function(require,module,exports) {
+})({"4G2S0":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "79963feb294a7ec3";
+module.bundle.HMR_BUNDLE_ID = "7a6896a1d498c491";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -578,11 +578,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"igGBp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9cb8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"g9R30":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$046e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9cb8.prelude(module);
+$parcel$ReactRefreshHelpers$046e.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -594,9 +594,9 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _mainViewJsx.MainView), {
         __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/index.jsx",
-            lineNumber: 8,
-            columnNumber: 8
+            fileName: "index.jsx",
+            lineNumber: 7,
+            columnNumber: 12
         },
         __self: undefined
     });
@@ -605,21 +605,21 @@ const container = document.querySelector("#root");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _reactDefault.default).createElement(MyFlixApplication, {
     __source: {
-        fileName: "Desktop/Bootcamp/myFlix-client/index.jsx",
-        lineNumber: 15,
+        fileName: "index.jsx",
+        lineNumber: 13,
         columnNumber: 13
     },
     __self: undefined
 }));
 
-  $parcel$ReactRefreshHelpers$9cb8.postlude(module);
+  $parcel$ReactRefreshHelpers$046e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-dom/client":"lOjBx","./components/main-view/main-view.jsx":"7p0mi","./index.scss":"dVHdI","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC"}],"lOjBx":[function(require,module,exports) {
+},{"react-dom/client":"emW2N","./components/main-view/main-view.jsx":"bJOVs","./index.scss":"93cso","react":"9Ht3F","@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC"}],"emW2N":[function(require,module,exports) {
 "use strict";
-var m = require("aaccff5d309d9239");
+var m = require("5bfff5738295b151");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 exports.createRoot = function(c, o) {
     i.usingClientEntryPoint = true;
@@ -638,7 +638,7 @@ exports.hydrateRoot = function(c, h, o) {
     }
 };
 
-},{"aaccff5d309d9239":"j6uA9"}],"j6uA9":[function(require,module,exports) {
+},{"5bfff5738295b151":"ayWTW"}],"ayWTW":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -652,9 +652,9 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("b0f0e6b9e8349dac");
+module.exports = require("953f07a4981a7e8e");
 
-},{"b0f0e6b9e8349dac":"3iA9v"}],"3iA9v":[function(require,module,exports) {
+},{"953f07a4981a7e8e":"1PNhh"}],"1PNhh":[function(require,module,exports) {
 /**
  * @license React
  * react-dom.development.js
@@ -667,8 +667,8 @@ module.exports = require("b0f0e6b9e8349dac");
 (function() {
     "use strict";
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("6f0162e9ab224cd4");
-    var Scheduler = require("8ad4ca65319d28a7");
+    var React = require("7317ed9333a8e646");
+    var Scheduler = require("3694d30309c28d79");
     var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     var suppressWarning = false;
     function setSuppressWarning(newSuppressWarning) {
@@ -21641,11 +21641,11 @@ module.exports = require("b0f0e6b9e8349dac");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"6f0162e9ab224cd4":"21dqq","8ad4ca65319d28a7":"juvHo"}],"21dqq":[function(require,module,exports) {
+},{"7317ed9333a8e646":"9Ht3F","3694d30309c28d79":"bMBfq"}],"9Ht3F":[function(require,module,exports) {
 "use strict";
-module.exports = require("a569817e6ea559f6");
+module.exports = require("ce35643e41d44ba3");
 
-},{"a569817e6ea559f6":"6YvXz"}],"6YvXz":[function(require,module,exports) {
+},{"ce35643e41d44ba3":"846BK"}],"846BK":[function(require,module,exports) {
 /**
  * @license React
  * react.development.js
@@ -23511,11 +23511,11 @@ module.exports = require("a569817e6ea559f6");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"juvHo":[function(require,module,exports) {
+},{}],"bMBfq":[function(require,module,exports) {
 "use strict";
-module.exports = require("ef03b89c8fe2794e");
+module.exports = require("9d5efe13d0d758b0");
 
-},{"ef03b89c8fe2794e":"RqdIf"}],"RqdIf":[function(require,module,exports) {
+},{"9d5efe13d0d758b0":"35CR6"}],"35CR6":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -23969,11 +23969,11 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"7p0mi":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1317 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"bJOVs":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f6a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1317.prelude(module);
+$parcel$ReactRefreshHelpers$f6a9.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -23982,8 +23982,9 @@ parcelHelpers.export(exports, "MainView", ()=>MainView);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _movieCardJsx = require("../movie-card.jsx");
+var _movieViewJsx = require("../movie-view/movie-view.jsx");
 const MainView = ()=>{
-    const [movies, setMovies] = useState([
+    const [movies, setMovies] = (0, _react.useState)([
         {
             id: 1,
             title: "Eloquent JavaScript",
@@ -24015,65 +24016,84 @@ const MainView = ()=>{
             author: "Robin Wieruch"
         }
     ]);
+    const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
+    if (selectedMovie) return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _movieViewJsx.MovieView), {
+        movie: selectedMovie,
+        onBackClick: ()=>setSelectedMovie(null),
+        __source: {
+            fileName: "components/main-view/main-view.jsx",
+            lineNumber: 47,
+            columnNumber: 12
+        },
+        __self: undefined
+    });
     if (movies.length === 0) return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
-            lineNumber: 44,
+            fileName: "components/main-view/main-view.jsx",
+            lineNumber: 51,
             columnNumber: 12
         },
         __self: undefined
     }, "Movies list is empty!");
-    //   const setMovies = function (newMoviesList) {
-    //     movies = newMoviesList;
-    //   };
-    return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, {
+    else return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
-            lineNumber: 52,
-            columnNumber: 5
-        },
-        __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
-            lineNumber: 53,
+            fileName: "components/main-view/main-view.jsx",
+            lineNumber: 54,
             columnNumber: 7
         },
         __self: undefined
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-        __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
-            lineNumber: 54,
-            columnNumber: 9
-        },
-        __self: undefined
-    }, movies.map((movie)=>{
-        /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _movieCardJsx.MovieCard), {
+    }, movies.map((movie)=>/*#__PURE__*/ (0, _reactDefault.default).createElement((0, _movieCardJsx.MovieCard), {
             key: movie.id,
             movie: movie,
+            onMovieClick: (newSelectedMovie)=>{
+                setSelectedMovie(newSelectedMovie);
+            },
             __source: {
-                fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
+                fileName: "components/main-view/main-view.jsx",
                 lineNumber: 56,
-                columnNumber: 13
+                columnNumber: 11
             },
             __self: undefined
-        });
-    })), /*#__PURE__*/ (0, _reactDefault.default).createElement("button", {
-        __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/main-view/main-view.jsx",
-            lineNumber: 59,
-            columnNumber: 9
-        },
-        __self: undefined
-    }, "Test Button")));
+        })));
 };
 
-  $parcel$ReactRefreshHelpers$1317.postlude(module);
+  $parcel$ReactRefreshHelpers$f6a9.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC","../movie-card.jsx":"dtwsx"}],"fD7H8":[function(require,module,exports) {
+},{"react":"9Ht3F","../movie-card.jsx":"2ud7F","@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC","../movie-view/movie-view.jsx":"lNY7v"}],"2ud7F":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a24 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5a24.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const MovieCard = (props)=>{
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        onClick: ()=>{
+            props.onMovieClick(props.movie);
+        },
+        __source: {
+            fileName: "components/movie-card.jsx",
+            lineNumber: 5,
+            columnNumber: 5
+        },
+        __self: undefined
+    }, props.movie.title);
+};
+
+  $parcel$ReactRefreshHelpers$5a24.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","react":"9Ht3F","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC"}],"fD7H8":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -24105,7 +24125,7 @@ exports.export = function(dest, destName, get) {
 
 },{}],"fDiVC":[function(require,module,exports) {
 "use strict";
-var Refresh = require("90299b9a2a331080");
+var Refresh = require("e39a8161855ff417");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -24241,11 +24261,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"90299b9a2a331080":"8QnHs"}],"8QnHs":[function(require,module,exports) {
+},{"e39a8161855ff417":"8QnHs"}],"8QnHs":[function(require,module,exports) {
 "use strict";
-module.exports = require("9e88035b1a351aca");
+module.exports = require("807019d71e752691");
 
-},{"9e88035b1a351aca":"10Glq"}],"10Glq":[function(require,module,exports) {
+},{"807019d71e752691":"10Glq"}],"10Glq":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -24705,21 +24725,99 @@ module.exports = require("9e88035b1a351aca");
     exports.setSignature = setSignature;
 })();
 
-},{}],"dtwsx":[function(require,module,exports) {
+},{}],"lNY7v":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2e96 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2e96.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieCard", ()=>MovieCard);
-const MovieCard = (props)=>{
-    return /*#__PURE__*/ React.createElement("div", {
+parcelHelpers.export(exports, "MovieView", ()=>MovieView);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const MovieView = ({ movie, onBackClick })=>{
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         __source: {
-            fileName: "Desktop/Bootcamp/myFlix-client/components/movie-card.jsx",
-            lineNumber: 2,
-            columnNumber: 12
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 5,
+            columnNumber: 5
         },
         __self: undefined
-    }, props.movie.title);
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("img", {
+        src: movie.image,
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 7,
+            columnNumber: 9
+        },
+        __self: undefined
+    })), /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 9,
+            columnNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 10,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, "Title: "), /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 11,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, movie.title)), /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 13,
+            columnNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 14,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, "Author: "), /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 15,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, movie.author)), /*#__PURE__*/ (0, _reactDefault.default).createElement("button", {
+        onClick: onBackClick,
+        __source: {
+            fileName: "components/movie-view/movie-view.jsx",
+            lineNumber: 17,
+            columnNumber: 7
+        },
+        __self: undefined
+    }, "Back"));
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8"}],"dVHdI":[function() {},{}]},["fgjiy","igGBp"], "igGBp", "parcelRequire94c2")
+  $parcel$ReactRefreshHelpers$2e96.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","react":"9Ht3F","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"fDiVC"}],"93cso":[function() {},{}]},["4G2S0","g9R30"], "g9R30", "parcelRequireaec4")
 
-//# sourceMappingURL=index.294a7ec3.js.map
+//# sourceMappingURL=index.d498c491.js.map
