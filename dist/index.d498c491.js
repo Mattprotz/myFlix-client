@@ -23981,19 +23981,21 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MainView", ()=>MainView);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _movieCardJsx = require("../movie-card.jsx");
 var _movieViewJsx = require("../movie-view/movie-view.jsx");
 const MainView = ()=>{
     const [movies, setMovies] = (0, _react.useState)([]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
-        fetch("https://openlibrary.org/search.json?q=star+wars").then((response)=>response.json()).then((data)=>{
-            const moviesFromAPI = data.docs.map((doc)=>{
+        fetch("https://myflix-movienet-6e137990a158.herokuapp.com/movies").then((response)=>response.json()).then((data)=>{
+            console.log("data from API:", JSON.stringify(data));
+            const moviesFromAPI = data.map((movie)=>{
                 return {
-                    id: doc.key,
-                    title: doc.title,
-                    image: `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
-                    author: doc.author_name?.[0]
+                    _id: movie.id,
+                    title: movie.title,
+                    director: movie.director.name
                 };
             });
             setMovies(moviesFromAPI);
@@ -24004,15 +24006,15 @@ const MainView = ()=>{
         onBackClick: ()=>setSelectedMovie(null),
         __source: {
             fileName: "components/main-view/main-view.jsx",
-            lineNumber: 29,
-            columnNumber: 12
+            lineNumber: 30,
+            columnNumber: 7
         },
         __self: undefined
     });
     if (movies.length === 0) return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         __source: {
             fileName: "components/main-view/main-view.jsx",
-            lineNumber: 33,
+            lineNumber: 38,
             columnNumber: 12
         },
         __self: undefined
@@ -24020,7 +24022,7 @@ const MainView = ()=>{
     else return /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
         __source: {
             fileName: "components/main-view/main-view.jsx",
-            lineNumber: 36,
+            lineNumber: 41,
             columnNumber: 7
         },
         __self: undefined
@@ -24032,7 +24034,7 @@ const MainView = ()=>{
             },
             __source: {
                 fileName: "components/main-view/main-view.jsx",
-                lineNumber: 38,
+                lineNumber: 43,
                 columnNumber: 11
             },
             __self: undefined
@@ -24044,7 +24046,7 @@ const MainView = ()=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"9Ht3F","../movie-card.jsx":"2ud7F","@parcel/transformer-js/src/esmodule-helpers.js":"LSq3m","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5L88I","../movie-view/movie-view.jsx":"lNY7v"}],"2ud7F":[function(require,module,exports) {
+},{"react":"9Ht3F","../movie-card.jsx":"2ud7F","@parcel/transformer-js/src/esmodule-helpers.js":"LSq3m","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5L88I","../movie-view/movie-view.jsx":"lNY7v","prop-types":"7wKI2"}],"2ud7F":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5a24 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -24071,6 +24073,7 @@ const MovieCard = ({ movie, onMovieClick })=>{
         __self: undefined
     }, movie.title);
 };
+//prop constraints
 MovieCard.propTypes = {
     movie: (0, _propTypesDefault.default).shape({
         title: (0, _propTypesDefault.default).string
@@ -25532,14 +25535,14 @@ const MovieView = ({ movie, onBackClick })=>{
             columnNumber: 9
         },
         __self: undefined
-    }, "Author: "), /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
+    }, "Director: "), /*#__PURE__*/ (0, _reactDefault.default).createElement("span", {
         __source: {
             fileName: "components/movie-view/movie-view.jsx",
             lineNumber: 15,
             columnNumber: 9
         },
         __self: undefined
-    }, movie.author)), /*#__PURE__*/ (0, _reactDefault.default).createElement("button", {
+    }, movie.director)), /*#__PURE__*/ (0, _reactDefault.default).createElement("button", {
         onClick: onBackClick,
         __source: {
             fileName: "components/movie-view/movie-view.jsx",

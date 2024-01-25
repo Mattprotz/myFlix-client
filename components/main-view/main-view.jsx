@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+
 import { MovieCard } from "../movie-card.jsx";
 import { MovieView } from "../movie-view/movie-view.jsx";
 
 export const MainView = () => {
-  const [movies, setMovies] = useState([
-    
-  ]);
+  const [movies, setMovies] = useState([]);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  useEffect(()=>{
-    fetch("https://openlibrary.org/search.json?q=star+wars")
+  useEffect(() => {
+    fetch("https://myflix-movienet-6e137990a158.herokuapp.com/movies")
       .then((response) => response.json())
-      .then((data) =>{
-        const moviesFromAPI = data.docs.map((doc)=>{
-          return{
-            id: doc.key,
-            title: doc.title,
-            image: `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
-            author: doc.author_name?.[0]
+      .then((data) => {
+        console.log("data from API:", JSON.stringify(data));
+        const moviesFromAPI = data.map((movie) => {
+          return {
+            _id: movie.id,
+            title: movie.title,
+            director: movie.director.name
           };
         });
         setMovies(moviesFromAPI);
@@ -26,7 +26,12 @@ export const MainView = () => {
   }, []);
 
   if (selectedMovie) {
-    return <MovieView movie={selectedMovie} onBackClick={() => setSelectedMovie(null)}/>;
+    return (
+      <MovieView
+        movie={selectedMovie}
+        onBackClick={() => setSelectedMovie(null)}
+      />
+    );
   }
 
   if (movies.length === 0) {
