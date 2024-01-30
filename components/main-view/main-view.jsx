@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-
 import { MovieCard } from "../movie-card.jsx";
 import { MovieView } from "../movie-view/movie-view.jsx";
 import { LoginView } from "../login-view/login-view.jsx";
 import { SignupView } from "../signup-view/signup-view.jsx";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user")); //pulling stored user data from local storage
@@ -15,20 +15,20 @@ export const MainView = () => {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  useEffect(() => {
-    fetch("https://myflix-movienet-6e137990a158.herokuapp.com")
-      .then((response) => response.json())
-      .then((data) => {
-        const moviesFromAPI = data.map((movie) => {
-          return {
-            _id: movie.id,
-            title: movie.title,
-            director: movie.director.name,
-          };
-        });
-        setMovies(moviesFromAPI);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://myflix-movienet-6e137990a158.herokuapp.com")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const moviesFromAPI = data.map((movie) => {
+  //         return {
+  //           _id: movie.id,
+  //           title: movie.title,
+  //           director: movie.director.name,
+  //         };
+  //       });
+  //       setMovies(moviesFromAPI);
+  //     });
+  // }, []);
 
   //initialize token from useState
   useEffect(() => {
@@ -40,12 +40,13 @@ export const MainView = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setMovies(data);
       });
   }, [token]);
 
   if (!user) {
     return (
-      <>
+      <Col md={2}>
         <LoginView
           onLoggedIn={(user, token) => {
             setUser(user);
@@ -53,16 +54,18 @@ export const MainView = () => {
           }}
         />
         <SignupView />
-      </>
+      </Col>
     );
   }
 
   if (selectedMovie) {
     return (
-      <MovieView
-        movie={selectedMovie}
-        onBackClick={() => setSelectedMovie(null)}
-      />
+      <Col md={8} style={{ border: "1px solid black" }}>
+        <MovieView
+          movie={selectedMovie}
+          onBackClick={() => setSelectedMovie(null)}
+        />
+      </Col>
     );
   }
 
@@ -72,13 +75,15 @@ export const MainView = () => {
     return (
       <div>
         {movies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            onMovieClick={(newSelectedMovie) => {
-              setSelectedMovie(newSelectedMovie);
-            }}
-          />
+          <Col className="mb-5" key={movie.id} md={3}>
+            <MovieCard
+              key={movie._id}
+              movie={movie}
+              onMovieClick={(newSelectedMovie) => {
+                setSelectedMovie(newSelectedMovie);
+              }}
+            />
+          </Col>
         ))}
         <button
           onClick={() => {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Form, Button} from "react-bootstrap";
 
 export const SignupView = () => {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ export const SignupView = () => {
       Birthday: birthday,
     };
 
-    fetch("SIGNUP_URL", {
+    fetch("https://myflix-movienet-6e137990a158.herokuapp.com/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -30,52 +31,52 @@ export const SignupView = () => {
         alert("Signup failed");
       }
     });
-
-    return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            placeholder="Enter Username..."
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            minLength="3"
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            placeholder="Enter Password..."
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            placeholder="Enter Email..."
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Birthday:
-          <input
-            type="date"
-            value={birthday}
-            placeholder="Enter Birthday..."
-            onChange={(e) => setBirthday(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
-    );
   };
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <label>
+        Username:
+        <Form.Control
+          type="text"
+          value={username}
+          placeholder="Enter Username..."
+          onChange={(e) => setUsername(e.target.value)}
+          required
+          minLength="3"
+        />
+      </label>
+      <label>
+        Password:
+        <Form.Control
+          type="password"
+          value={password}
+          placeholder="Enter Password..."
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+      </label>
+      <label>
+        Email:
+        <Form.Control
+          type="email"
+          value={email}
+          placeholder="Enter Email..."
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </label>
+      <label>
+        Birthday:
+        <Form.Control
+          type="date"
+          value={birthday}
+          placeholder="Enter Birthday..."
+          onChange={(e) => setBirthday(e.target.value)}
+          required
+        />
+      </label>
+      <Button type="submit">Sign Up</Button>
+    </Form>
+  );
 };

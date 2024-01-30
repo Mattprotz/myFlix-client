@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -6,10 +8,10 @@ export const LoginView = ({ onLoggedIn }) => {
   const handleLogin = (event) => {
     event.preventDefault();
     const data = {
-      access: username,
-      secret: password,
+      Username: username,
+      Password: password,
     };
-    fetch("https://myflix-movienet-6e137990a158.herokuapp.com/users", {
+    fetch("https://myflix-movienet-6e137990a158.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,8 +22,8 @@ export const LoginView = ({ onLoggedIn }) => {
       .then((data) => {
         console.log("Login response: ", data);
         if (data.user) {
-            localStorage.setItem("user", JSON.stringify(data.user)); // storing user and token locally
-            localStorage.setItem("token", data.token); // ^ persisting a login session
+          localStorage.setItem("user", JSON.stringify(data.user)); // storing user and token locally
+          localStorage.setItem("token", data.token); // ^ persisting a login session
           onLoggedIn(data.user, data.token); //pass back to main-view
         } else {
           alert("No such user");
@@ -33,28 +35,28 @@ export const LoginView = ({ onLoggedIn }) => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <label>
-        Username:
-        <input
+    <Form onSubmit={handleLogin}>
+      <Form.Group controlID="formUsername">
+        <Form.Label>Username:</Form.Label>
+        <Form.Control
           type="text"
           value={username}
-          placeholder="Username"
+          placeholder="(min length 3 characters)"
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Password:
-        <input
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Password:</Form.Label>
+        <Form.Control
           type="password"
           value={password}
-          placeholder="Password"
+          placeholder="(min length 3 characters)"
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Login</button>
-    </form>
+      </Form.Group>
+      <Button type="submit">Login</Button>
+    </Form>
   );
 };
