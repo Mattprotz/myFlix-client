@@ -28,7 +28,13 @@ export const SignupView = () => {
         alert("Signup successful");
         window.location.reload();
       } else {
-        alert("Signup failed");
+        return response.json().then((errorData)=>{
+          throw new Error(errorData.message)
+        })
+        .catch((error)=>{
+          console.error("Error", error.message)
+          alert("Signup failed" + error.message);
+        });
       }
     });
   };
@@ -63,7 +69,7 @@ export const SignupView = () => {
           value={email}
           placeholder="Enter Email..."
           onChange={(e) => setEmail(e.target.value)}
-          required
+          
         />
       </label>
       <label>
@@ -73,7 +79,7 @@ export const SignupView = () => {
           value={birthday}
           placeholder="Enter Birthday..."
           onChange={(e) => setBirthday(e.target.value)}
-          required
+          
         />
       </label>
       <Button type="submit">Sign Up</Button>
