@@ -3,6 +3,7 @@ import { MovieCard } from "../movie-card.jsx";
 import { MovieView } from "../movie-view/movie-view.jsx";
 import { LoginView } from "../login-view/login-view.jsx";
 import { SignupView } from "../signup-view/signup-view.jsx";
+import {NavigationBar} from "../navigation-bar/navigation-bar.jsx";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -32,6 +33,7 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
+    <NavigationBar user={user} onLoggedOut={()=>{setUser(null); setToken(null)}}/>
       <Container>
         <Routes>
           <Route
