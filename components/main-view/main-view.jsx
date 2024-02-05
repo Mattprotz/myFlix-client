@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MovieCard } from "../movie-card.jsx";
+import { MovieCard } from "../movie-card/movie-card.jsx";
 import { MovieView } from "../movie-view/movie-view.jsx";
 import { LoginView } from "../login-view/login-view.jsx";
 import { SignupView } from "../signup-view/signup-view.jsx";
