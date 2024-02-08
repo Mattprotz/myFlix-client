@@ -31,10 +31,10 @@ export const SignupView = () => {
         return response.json().then((errorData)=>{
           throw new Error(errorData.message)
         })
-        // .catch((error)=>{
-        //   console.error("Error", error.message)
-        //   alert("Signup failed" + error.message);
-        // });
+        .catch((error)=>{
+          console.error("Error", error.message)
+          alert("Signup failed" + error.message);
+        });
       }
     });
   };
