@@ -8,7 +8,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run deploy"
   },
   "repository": {
     "type": "git",
