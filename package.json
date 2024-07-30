@@ -2,9 +2,12 @@
   "name": "myflix-client",
   "version": "1.0.0",
   "description": "",
+  "homepage" :"https://mattprotz.github.io/myFlix-client/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
